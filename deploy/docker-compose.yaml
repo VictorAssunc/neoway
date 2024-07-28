@@ -1,0 +1,36 @@
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: neoway-postgres
+    restart: always
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: 5up3r53cr37!
+      POSTGRES_DB: neoway
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: [ "CMD", "pg_isready -d $${POSTGRES_DB} -U $${POSTGRES_USER}" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    volumes:
+      - ./database:/docker-entrypoint-initdb.d
+      - postgres_data:/var/lib/postgresql/data
+
+  app:
+    build:
+      context: ..
+      dockerfile: build/Dockerfile
+    container_name: neoway-app
+    environment:
+      POSTGRES_HOST: db
+      POSTGRES_PORT: 5432
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: 5up3r53cr37!
+      POSTGRES_DB: neoway
+    depends_on:
+      - db
+
+volumes:
+  postgres_data: {}

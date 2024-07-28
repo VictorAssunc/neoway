@@ -134,6 +134,6 @@ Os campos `valid_cpf`, `valid_most_frequent_store`, `valid_last_order_store` e `
 ### Desejáveis
 
 - [X] Pode ser executado diretamente no serviço da linguagem desejada ou em sql
-- [ ] Integração contínua na plataforma do repositório escolhido
+- [X] Integração contínua na plataforma do repositório escolhido
 - [X] Testes automatizados
 - [X] Tempo de execução < 1 min

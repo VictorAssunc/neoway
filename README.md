@@ -4,6 +4,17 @@ Repositório contendo a solução para o teste técnico Neoway.
 
 ## Como Executar
 
+É necessário clonar o repositório para executar o projeto:
+
+**SSH:**
+```shell
+git clone git@github.com:VictorAssunc/neoway.git
+```
+**HTTPS:**
+```shell
+git clone https://github.com/VictorAssunc/neoway.git
+```
+
 Todos os seguintes comandos devem ser executados na raiz do projeto.
 
 ### Makefile

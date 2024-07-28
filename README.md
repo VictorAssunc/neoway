@@ -1,4 +1,4 @@
-# neoway
+# neoway [![Go](https://github.com/VictorAssunc/neoway/actions/workflows/go.yml/badge.svg)](https://github.com/VictorAssunc/neoway/actions/workflows/go.yml)
 
 Repositório contendo a solução para o teste técnico Neoway.
 
